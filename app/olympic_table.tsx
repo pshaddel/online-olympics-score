@@ -1,15 +1,16 @@
 "use client";
 
-import React from "react";
-
-setTimeout(function() {
-  console.log("Reloading page...");
-  window.location.reload();
-}, 60000);
+import React, { useEffect } from "react";
 
 export default function OlympicTable({ data }: {
     data: [string, string, number, number, number, number, number][];
 }) {
+  useEffect(() => {
+    setTimeout(function() {
+      console.log("Reloading page...");
+      window.location.reload();
+    }, 60000);
+  }, []);
   return (
     <div className="overflow-x-auto">
     <table className="w-full table-auto">
