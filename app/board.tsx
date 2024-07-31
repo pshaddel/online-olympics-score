@@ -4,7 +4,9 @@ import OlympicTable from "./olympic_table";
 
 export async function Board() {
     const wikipage = "https://en.wikipedia.org/wiki/2024_Summer_Olympics_medal_table";
-    const response = await fetch(wikipage)
+    const response = await fetch(wikipage, {
+      next: { revalidate: 55, tags: ["olympic-table"] }
+     })
     const responseText = await response.text()
     const data = await getOlympicTableDataFromWeb(responseText)
 
