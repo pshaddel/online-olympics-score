@@ -14,12 +14,12 @@ export default function OlympicTable({ data }: {
   const elemsize = "px-6 py-6"
   return (
     // make font size of everything 20% bigger
-    <div className="overflow-x-auto text-2xl">
-      <table className="min-w-full table-auto">
+    <div className="overflow-x-auto text-xl">
+      <table className="min-w-full table-auto p-2">
         <thead>
           <tr>
             <th className={`${elemsize} min-w-9`}>Logo</th>
-            <th className={`${elemsize}`}>Country</th>
+            <th className={`${elemsize} text-justify`}>Country</th>
             <th className={`${elemsize} text-yellow-500`}>Gold</th>
             <th className={`${elemsize} text-gray-400`}>Silver</th>
             <th className={`${elemsize} text-orange-500`}>Bronze</th>
@@ -29,11 +29,12 @@ export default function OlympicTable({ data }: {
         <tbody>
           {data.map((row, index) => (
             <tr key={index}>
-              <td className={`border ${elemsize}`}><img
+              <td className={`border ${elemsize} text-right`}><img
                 src={row[0]}
                 alt={`${row[1]} Flag`}
                 width={22}
                 height={15}
+                style={{ paddingLeft: "5px" }}
               /></td>
               <td className={`border ${elemsize}`}>{row[1]}</td>
               <td className={`border ${elemsize} text-yellow-500 font-bold`}>{row[3]}</td>
