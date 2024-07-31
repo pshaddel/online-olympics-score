@@ -14,7 +14,7 @@ export default function OlympicTable({ data }: {
   const elemsize = "px-6 py-6"
   return (
     // make font size of everything 20% bigger
-    <div className="overflow-x-auto text-lg">
+    <div className="overflow-x-auto text-2xl">
       <table className="min-w-full table-auto">
         <thead>
           <tr>
@@ -36,10 +36,10 @@ export default function OlympicTable({ data }: {
                 height={15}
               /></td>
               <td className={`border ${elemsize}`}>{row[1]}</td>
-              <td className={`border ${elemsize} text-yellow-500`}>{row[3]}</td>
-              <td className={`border ${elemsize} text-gray-400`}>{row[4]}</td>
-              <td className={`border ${elemsize} text-orange-500`}>{row[5]}</td>
-              <td className={`border ${elemsize}`}>{row[6]}</td>
+              <td className={`border ${elemsize} text-yellow-500 font-bold`}>{row[3]}</td>
+              <td className={`border ${elemsize} text-gray-400 font-bold`}>{row[4]}</td>
+              <td className={`border ${elemsize} text-orange-500 font-bold`}>{row[5]}</td>
+              <td className={`border ${elemsize} font-bold` }>{row[6]}</td>
             </tr>
           ))}
         </tbody>
